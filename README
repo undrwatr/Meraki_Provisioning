@@ -1,6 +1,6 @@
 Description
 ===========
-This is a program I wrote to help me with configuring a massive amount of Meraki devices. This requires that the Meraki network already exist, but allows you to pull data from a sql database and then upload that configuration to the Meraki cloud and then turn on the site to site vpn. I will be modifying it in the future to read the stores from a flat file so I can just copy them all in. I am using this program after the intial load of stores is done via a CSV with the s/n from the Meraki Dashboard. Hopefully I can expand on the features of this program as Meraki updates their API and adds more functionality to it.
+This is a program I wrote to help me with configuring a massive amount of Meraki devices. This requires that the Meraki network already exist, but allows you to pull data from a sql database and then upload that configuration to the Meraki cloud and then turn on the site to site vpn. I will be modifying it in the future to read the stores from a flat file so I can just copy them all in. I am using this program after the intial load of stores is done via a CSV with the s/n from the Meraki Dashboard. Hopefully I can expand on the features of this program as Meraki updates their API and adds more functionality to it and make it setup everything without needing the csv file.
 
 
 Contact
