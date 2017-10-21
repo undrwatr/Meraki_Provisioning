@@ -45,14 +45,16 @@ get_network_url = dashboard + '/api/v0/organizations/%s/networks' % organization
 
 #request the network data
 get_network_response = requests.get(get_network_url, headers=headers)
-
-#puts the data into json format
-get_network_json = get_network_response.json()
-
-#pull back the network_id of the store that you are configuring
-for i in get_network_json:
-    if i["name"] == str(store):
-        network_id=(i["id"])
+if get_network_response.status_code == 200:
+    #puts the data into json format
+    get_network_json = get_network_response.json()
+    #pull back the network_id of the store that you are configuring
+    for i in get_network_json:
+        if i["name"] == str(store):
+            network_id=(i["id"])
+else:
+    print("API Rate is to high, try again later")
+    sys.exit()
 
 #Update Vlans based on information taken from SQL Server, I only have a VLAN2 and VLAN5 so this is specific for my needs.
 
