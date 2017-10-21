@@ -1,13 +1,17 @@
 #!/usr/bin/python
 
 #imports
-import sys
 import requests
 import json
 import os
 import pymssql as mdb
 import subprocess
+import sys
+
+#Import the CRED module from a separate directory
+sys.path.insert(0,'../CRED')
 import cred
+
 
 #custom variables for the program imported from the cred.py file located in the same directory
 organization = cred.organization
